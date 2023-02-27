@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>下層ページの構成とは - WebDesign</title>
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="img/favicon.png">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/next.css">
+</head>
+<body id="top">
+    <div class="container">
+        <header>
+            <!-- コメントアウトはCtl＋/ -->
+            <!-- 候補を出す　Ctl+space -->
+            <!-- サイト名はh1(大見出し)で囲む -->
+            <h1><a href="index.html">WebDesign</a></h1>
+        </header>
+
+        <!-- メニューの時はul・liをセットで使う -->
+        <!-- navは主要なメニュー -->
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="next.html" class="active">下層ページの構成</a></li>
+                <li><a href="contact.html">お問い合わせ</a></li>
+            </ul>
+        </nav>
+
+        <main>
+
+
+            <article>
+                <h1>下層ページの構成とは</h1>
+                <section>
+                    <h2>下層ページの大見出し</h2>
+                    <p>下層ページの大見出しは、mainの見出しとなる。headerのh1とmainのh1が存在することになる。</p>
+                </section>
+                <section class="flex">
+                    <h2>FlexBoxレイアウトの基本</h2>
+                    <div>
+                        <p class="left">FlexBoxの左エリア<br>幅サイズは250px</p>
+                        <div class="right">
+                            <p><img src="img/float.png">FlexBoxの右側に配置するエリアで、幅サイズは650pxです。</p>
+                            <p>画像の横にテキストを回り込ませ、複数行で表示させるために、img要素にfloatを設定します。</p>
+                            <p>floatプロパティの値をleftにすると、画像が左に配置され、テキストが右に配置されます。rightにすると、画像が右に、テキストが左に配置されます。floatを解除したい要素には、clearプロパティでbothを設定します。</p>
+                        </div>
+                    </div>
+                    <p class="homelink"><a href="https://developer.mozilla.org/ja/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout" target="_blank">グリッドレイアウト</a></p>
+                </section>
+                <section class="list">
+                    <h2>下層ページに使われる要素</h2>
+                    <ul>
+                        <li>大見出し（h1）を含むメインコンテンツを囲むarticleタグ</li>
+                        <li>大見出し（h1）以外の見出しとその内容をグループ化するsectionタグ</li>
+                        <li>現在のページの階層を明示するパンくずリストは、番号付きリスト（olタグ）</li>
+                        <li>バナーや注意書きなどの補足情報は、asideタグ</li>
+                    </ul>
+                </section>
+                <section class="menu">
+                    <h2>罫線を使用したメニュー</h2>
+                    <ul>
+                        <li><a href="#">HOME</a></li>
+                        <li><a href="#">PRODUCT</a></li>
+                        <li><a href="#">SERVICE</a></li>
+                        <li><a href="#">SUPPORT</a></li>
+                        <li><a href="#">COMPANY</a></li>
+                        <li><a href="#">ACCESS</a></li>
+                        <li><a href="#">CONTACT</a></li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>表組み</h2>
+                    <table>
+                        <caption>テーブルのテスト</caption>
+                        <thead>
+                            <tr>
+                                <th>A列</th>
+                                <th>B列</th>
+                                <th>C列</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1-a</td>
+                                <td>1-b</td>
+                                <td>1-c</td>
+                            </tr>
+
+
+                            <tr>
+                                <td>2-a</td>
+                                <td>2-b</td>
+                                <td>2-c</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th colspan="2">セルの合計数</th>
+                                <td>11</td>
+                                <!-- <td>&nbsp;</td> -->
+                            </tr>
+                        </tfoot>
+                    </table>
+
+                </section>
+            </article>
+            <p class="homelink"><a href="index.html"> HOMEに戻る</a></p>
+        </main>
+    </div>
+
+    <footer>
+        <p class="pagetop"><a href="#top"><img src="img/gotop.svg" width="32" height="32" alt="ページトップへ"></a></p>
+        <!-- smallは著作権 -->
+        <p class="copyright"><small>
+                &copy;2021 WebDesign.
+                <span>All Rights Reserved.</span>
+            </small></p>
+    </footer>
+</body>
+</html>

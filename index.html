@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>WebDesign</title>
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="img/favicon.png">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body id="top">
+    <div class="container">
+        <header>
+            <!-- コメントアウトはCtl＋/ -->
+            <!-- 候補を出す　Ctl+space -->
+            <!-- サイト名はh1(大見出し)で囲む -->
+            <h1><a href="index.html">WebDesign</a></h1>
+        </header>
+
+        <!-- メニューの時はul・liをセットで使う -->
+        <!-- navは主要なメニュー -->
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">HOME</a></li>
+                <li><a href="next.html">下層ページの構成</a></li>
+                <li><a href="contact.html">お問い合わせ</a></li>
+            </ul>
+        </nav>
+        <!-- ［メインビジュアル］ -->
+        <p class="visual"><img src="img/web.jpg" alt="Webページ制作言語"></p>
+
+        <main>
+            <section>
+                <h2>TOPページの見出し</h2>
+                <!-- 迷ったらpを使う -->
+                <p>TOPページの大見出し（h1）はサイト名に設定するので、mainタグ内は中見出し（h2）から使い始める。</p>
+            </section>
+            <section>
+                <h2>セクションとは</h2>
+                <p>見出しとその内容は、sectionタグでグループ化する。小見出しがある場合、中見出し（h2）のsectionの中に小見出し（h3）のsectionが入ることもある。</p>
+            </section>
+            <aside>
+                <p>バナーや注意書きなどの補足情報はasideで囲む。</p>
+            </aside>
+        </main>
+    </div>
+
+    <footer>
+        <p class="pagetop"><a href="#top"><img src="img/gotop.svg" width="32" height="32" alt="ページトップへ"></a></p>
+        <!-- smallは著作権 -->
+        <p class="copyright"><small>
+                &copy;2021 WebDesign.
+                <span>All Rights Reserved.</span>
+            </small></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,182 @@
+@import url(common.css);
+
+/*［セクションの書式］下余白:30px */
+main article section {
+  padding-bottom: 30px;
+}
+
+/*［中見出しの書式］文字色:任意、文字サイズ:18px、背景画像:bg_h2_top.png(bg_h2_bottom.png)、繰り返しなし、背景画像位置:左下(左下)、内側上下余白: 20px、内側左余白:50px、外側下余白:20px */
+main article section h2 {
+  color: #e6d06e;
+  font-size: 18px;
+  background-image: url(../img/bg_h2_top.png), url(../img/bg_h2_bottom.png);
+  background-repeat: no-repeat;
+  background-position: left top, left bottom;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 50px;
+  margin-bottom: 20px;
+}
+
+/*［"HOMEに戻る"ボタンの書式］背景色:任意、文字色:白、内側上下余白:15px、内側左右余白:25px、ブロック表示、幅:フィット、外側余白:0 auto、背景画像:arrow.png、繰り返しなし、背景画像サイズ:6px、背景画像位置:右から11px 中央 */
+main p.homelink a {
+  background-color: blue;
+  color: #fff;
+  /* padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 25px;
+  padding-right: 25px; */
+  padding: 15px 25px;
+  /* インラインは上下余白を設定できない */
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  background-image: url(../img/arrow.png);
+  background-repeat: no-repeat;
+  background-size: 6px;
+  background-position: right 11px center;
+}
+
+/*［"HOMEに戻る"ボタンのホバー設定］不透明度:0.7 */
+main p.homelink a:hover {
+  opacity: 0.7;
+}
+
+/*--------------------
+FlexBoxの設定
+--------------------*/
+/* FlexBox、横方向:均等配置 */
+section.flex > div {
+  padding-bottom: 20px;
+  line-height: 1.5;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* 幅:250px */
+section.flex p.left {
+  background-color: bisque;
+  padding: 10px;
+  flex-basis: 26.6%;
+}
+
+/* 幅:650px */
+section.flex .right {
+  background-color: aliceblue;
+  padding: 10px;
+  flex-basis: 69.1%;
+}
+
+/* フロート、文字との余白:15px */
+section.flex .right img {
+  float: right;
+  padding-left: 15px;
+  padding-bottom: 15px;
+}
+
+/* フロートの解除 */
+section.flex .right p:last-child {
+  clear: both;
+}
+
+/* FlexBox、折り返す、横方向:均等配置、行間隔:20px */
+section.list ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 20px;
+}
+
+/* 幅サイズ:460px */
+section.list li {
+  border: 1px solid #333;
+  padding: 10px;
+  line-height: 1.5;
+  flex-basis: 48.9%;
+}
+
+/*--------------------
+罫線メニュー
+--------------------*/
+/* FlexBox */
+section.menu ul {
+  display: flex;
+}
+
+/* 幅比率:1 */
+section.menu li {
+  flex: 1;
+}
+
+/* 文字色:任意、太字、ボーダー（線幅:2px、直線、カラー:文字色と同じ）、ブロック表示、中央揃え、行の高さ:36px */
+section.menu li a {
+  color: red;
+  font-weight: bold;
+  border-top: 2px solid red;
+  border-right: 2px solid red;
+  border-bottom: 2px solid red;
+  display: block;
+  text-align: center;
+  line-height: 36px;
+}
+
+section.menu li:first-child a {
+  border-left: 2px solid red;
+}
+/* 文字色:白、背景色:線カラーと同じ */
+section.menu li a:hover {
+  color: #fff;
+  background-color: red;
+}
+/*--------------------
+絶対配置 absolute
+--------------------*/
+/* 絶対配置の基準（相対配置） */
+section.flex {
+  position: relative;
+}
+
+/* 絶対配置、上:5px、右:0 */
+section.flex p.homelink {
+  position: absolute;
+  top: 5px;
+  right: 0;
+}
+
+/* レスポンシブ */
+
+@media (max-width: 767px) {
+  section.flex p.homelink {
+    position: unset;
+  }
+}
+
+@media (max-width: 575px) {
+  section.flex > div {
+    display: block;
+  }
+
+  section.flex p.left {
+    margin-bottom: 20px;
+  }
+
+  section.list ul {
+    display: block;
+  }
+
+  section.list li {
+    margin-bottom: 20px;
+  }
+
+  section.menu ul {
+    display: block;
+  }
+
+  section.menu li a {
+    border-top: unset;
+    border-left: 2px solid red;
+  }
+  section.menu li:first-child a {
+    border-top: 2px solid red;
+  }
+}
